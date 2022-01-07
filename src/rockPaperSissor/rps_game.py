@@ -1,22 +1,36 @@
-"""Console rock paper and scissors game"""
+"""Console rock paper and scissors game
 
-## APP: Rock, paper and scissors game
-## Author: Alan Santos
-## Version: 1.0 - 05/01/22
+Usage:
+    python3 rps_game.py
+"""
+
 
 import random
 from os import system, name
 
+
 # global player options dict
 OPTIONS = {"p": "pedra","a":"papel","t":"tesoura"}
 
+
 def computer_player_option():
-    """ Returns random computer game option"""
+    """ get computer game option
+
+        Args:
+
+        Returns: 
+            A string of random computer choice from the options list.    
+    """
     return random.choice(list(OPTIONS.values()))
+
 
 def user_choice_option():
     """ Set humans player option
-        returns user_prompt
+        
+        Args: 
+        
+        returns:
+            The user_prompt string
     """
     # reload user options case invalid selection
     user_choice_loop = None
@@ -38,8 +52,10 @@ def user_choice_option():
             
 
 def game_choices(user_choice, computer_choice):
-    """ get user_choice, computer_choice
-        Show player's options
+    """ Show player's option
+
+        Args: 
+            user_choice string, computer_choice string
     """ 
     print()
     print("computador ---->",computer_choice.upper(), "x", user_choice.upper(),"<---- Jogador" )
@@ -47,8 +63,10 @@ def game_choices(user_choice, computer_choice):
 
 
 def game_result(user_choice, computer_choice):
-    """ get user_choice, computer_choice
-        Show game result
+    """ Show the game result
+
+        Args: 
+            user_choice string, computer_choice string
     """
     if computer_choice == user_choice:
 
@@ -79,8 +97,10 @@ def game_result(user_choice, computer_choice):
     elif user_choice == "pedra" and computer_choice == "tesoura":
         print("Pedra quebra tesoura. Você ganhou!")
 
+
 def clear():
-    """Set clear screen command according OS type"""
+    """clear screen command according OS type
+    """
     # for windows
     if name == 'nt':
         _ = system('cls')  
@@ -88,8 +108,10 @@ def clear():
     else:
         _ = system('clear')  
 
+
 def main():
-    """The main function"""
+    """The main function
+    """
 
     # game loop
     letsplay = "s"
