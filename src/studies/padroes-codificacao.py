@@ -20,6 +20,7 @@ def minha_funcao(x: int, y: int) -> int:
     Esta função recebe valores x e y
 
     """
+
     r = x + y
     pass
 
@@ -35,6 +36,7 @@ def segunda_funcao(x: int, y: int) -> int:
     De uma função para outra separar com 2 linhas em branco
 
     """
+    
     pass
 
 
