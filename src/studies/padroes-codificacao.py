@@ -6,6 +6,7 @@
 
 padrao_nome_de_variavel = 4
 
+
 def minha_funcao(x: int, y: int) -> int:
     """Teste.
 
@@ -36,7 +37,7 @@ def segunda_funcao(x: int, y: int) -> int:
     De uma função para outra separar com 2 linhas em branco
 
     """
-    
+
     pass
 
 
